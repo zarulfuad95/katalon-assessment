@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "f5eac3ae-aeb9-4df8-a6d9-ee36887c1a0d",
+		"name": "Post Malaysia Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40333911"
+	},
+	"item": [
+		{
+			"name": "countryList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/countries",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStateByPostcode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"postCode\": \"35600\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"getStateByPostcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PriceAndQuote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"country\": \"Malaysia\",\r\n  \"postcodeFrom\": \"35600\",\r\n  \"postcodeTo\": \"84000\",\r\n  \"weight\": \"1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/price",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
