@@ -3,10 +3,13 @@
    <description></description>
    <name>demo</name>
    <tag></tag>
-   <UUID>2be1953f-d7ef-496b-9ff2-280e4f491bc8</UUID>
+   <UUID>93ebbdd8-25e0-435c-8a09-8d5893630aa5</UUID>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedVersion>9.7.3</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/quiducle/Documents/calculator-sample/demo.prj</projectFileLocation>
+   <projectFileLocation>C:\Users\Zarul Fuad\Katalon Studio\test 2\demo.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
@@ -25,5 +28,6 @@
          </systemFolderConfiguration>
       </systemFolderList>
    </sourceContent>
-   <type>WEBUI</type>
+   <timeStampInProperties>true</timeStampInProperties>
+   <type>GENERIC</type>
 </Project>

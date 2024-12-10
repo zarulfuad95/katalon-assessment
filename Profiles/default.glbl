@@ -9,4 +9,9 @@
       <initValue>'https://katalon-studio-samples.github.io/calculator'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>30</initValue>
+      <name>MIN_WAIT</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
