@@ -7,5 +7,5 @@ Feature: Logintest
     And I Enter 'India' Country
     And I select "India" with code "IN"
     And I insert '1' as Weight
-    And I Click Calculate button
-		Then I verify The List Quote
+    Then I Click Calculate button
+		

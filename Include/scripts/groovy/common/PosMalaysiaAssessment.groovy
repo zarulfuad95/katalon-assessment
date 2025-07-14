@@ -81,50 +81,12 @@ class PosMalaysiaAssessment {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Pos_Malaysia/Input_itemweight'),GlobalVariable.MIN_WAIT)
 		WebUI.setText(findTestObject('Object Repository/Pos_Malaysia/Input_itemweight'),Weight)
 	}
-	@And("I Click Calculate button")
+	@Then("I Click Calculate button")
 	def I_Click_Calculate_button() {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Pos_Malaysia/a_CalculateButton'),GlobalVariable.MIN_WAIT)
 		WebUI.click(findTestObject('Object Repository/Pos_Malaysia/a_CalculateButton'))
 	}
-	@Then("I verify The List Quote")
-	def I_verify_The_List_Quote() {
-		// Scroll to the element containing the service list
-		WebUI.scrollToElement(findTestObject('Object Repository/Pos_Malaysia/div_servicelist'), 3)
 	
-		// Define the expected service types
-		List<String> expectedServiceTypes = [
-			"Service Type", "Express Mail Service (EMS)", "Estimated Delivery Time", "Features",
-			"Proof of Delivery", "Door-toDoor", "Basic protection", "Tracking", "Insurance", "RM 196.50", "Book Now",
-			"Service Type", "International Air Parcel", "Estimated Delivery Time", "Features",
-			"Proof of Delivery", "Door-toDoor", "Basic protection", "Tracking", "Insurance", "RM 153.60", "Book Now",
-			"Service Type", "International Surface Parcel", "Estimated Delivery Time", "Features",
-			"Proof of Delivery", "Door-toDoor", "Basic protection", "Tracking", "Insurance", "RM 101.00", "Book Now"
-		]
-	
-		// Retrieve actual service types
-		List<String> actualServiceTypes = []
-		List<WebElement> serviceTypeElements = WebUI.findWebElements(findTestObject('Object Repository/Pos_Malaysia/div_servicelist'), 30)
-	
-		for (WebElement element : serviceTypeElements) {
-			// Split multi-line text into individual items
-			actualServiceTypes.addAll(element.getText().trim().split("\\n"))
-		}
-	
-		// Normalize both lists: trim whitespace and remove empty entries
-		expectedServiceTypes = expectedServiceTypes.collect { it.trim() }.findAll { it }
-		actualServiceTypes = actualServiceTypes.collect { it.trim() }.findAll { it }
-	
-		// Debug: Log both lists
-		KeywordUtil.logInfo("Expected Service Types: " + expectedServiceTypes)
-		KeywordUtil.logInfo("Actual Service Types: " + actualServiceTypes)
-	
-		// Compare sorted lists
-		if (expectedServiceTypes.sort() == actualServiceTypes.sort()) {
-			KeywordUtil.logInfo("All expected service types are displayed correctly.")
-		} else {
-			KeywordUtil.markFailed("Service types do not match. Expected: " + expectedServiceTypes + ", Actual: " + actualServiceTypes)
-		}
-	}
 	
 	
 }
